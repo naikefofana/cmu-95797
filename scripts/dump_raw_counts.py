@@ -1,9 +1,25 @@
+#./env python
 import duckdb
-import pandas as pd
+import sys
 
-connection = duckdb.connect('main.db')
+#Create list of table names
+raw_tables = [
+    "central_park_weather",
+    "fhv_bases",
+    "fhv_tripdata",
+    "fhvhv_tripdata",
+    "green_tripdata",
+    "yellow_tripdata",
+    "bike_data",
+]
 
-for table in connection:
-    row_count = pd.df.shape[0]
+#Function to fetch # of rows
+def main(conn):
+    for t in sorted(raw_tables):
+        rows = conn.sql(f"SELECT COUNT(*) FROM {t}").fetchone()[0]
+        print(t, rows)
 
-	print(table.name, ' : ', row_count, ' rows.')
+
+if __name__ == "__main__":
+    with duckdb.connect('main.db') as conn:
+        main(conn)
