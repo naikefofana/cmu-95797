@@ -1,0 +1,141 @@
+sources:
+  - name: main
+    tables:
+      - name: bike_data
+        columns:
+          - name: tripduration
+          - name: starttime
+          - name: stoptime
+          - name: start station id
+          - name: start station name
+          - name: start station latitude
+          - name: start station longitude
+          - name: end station id
+          - name: end station name
+          - name: end station latitude
+          - name: end station longitude
+          - name: bikeid
+          - name: usertype
+          - name: birth year
+          - name: gender
+          - name: ride_id
+          - name: rideable_type
+          - name: started_at
+          - name: ended_at
+          - name: start_station_name
+          - name: start_station_id
+          - name: end_station_name
+          - name: end_station_id
+          - name: start_lat
+          - name: start_lng
+          - name: end_lat
+          - name: end_lng
+          - name: member_casual
+          - name: filename
+
+      - name: central_park_weather
+        columns:
+          - name: station
+          - name: name
+          - name: date
+          - name: awnd
+          - name: prcp
+          - name: snow
+          - name: snwd
+          - name: tmax
+          - name: tmin
+          - name: filename
+
+      - name: fhv_bases
+        columns:
+          - name: base_number
+          - name: base_name
+          - name: dba
+          - name: dba_category
+          - name: filename
+
+      - name: fhv_tripdata
+        columns:
+          - name: dispatching_base_num
+          - name: pickup_datetime
+          - name: dropoff_datetime
+          - name: pulocationid
+          - name: dolocationid
+          - name: sr_flag
+          - name: affiliated_base_number
+          - name: filename
+
+      - name: fhvhv_tripdata
+        columns:
+          - name: hvfhs_license_num
+          - name: dispatching_base_num
+          - name: originating_base_num
+          - name: request_datetime
+          - name: on_scene_datetime
+          - name: pickup_datetime
+          - name: dropoff_datetime
+          - name: pulocationid
+          - name: dolocationid
+          - name: trip_miles
+          - name: trip_time
+          - name: base_passenger_fare
+          - name: tolls
+          - name: bcf
+          - name: sales_tax
+          - name: congestion_surcharge
+          - name: airport_fee
+          - name: tips
+          - name: driver_pay
+          - name: shared_request_flag
+          - name: shared_match_flag
+          - name: access_a_ride_flag
+          - name: wav_request_flag
+          - name: wav_match_flag
+          - name: filename
+
+      - name: green_tripdata
+        columns:
+          - name: vendorid
+          - name: lpep_pickup_datetime
+          - name: lpep_dropoff_datetime
+          - name: store_and_fwd_flag
+          - name: ratecodeid
+          - name: pulocationid
+          - name: dolocationid
+          - name: passenger_count
+          - name: trip_distance
+          - name: fare_amount
+          - name: extra
+          - name: mta_tax
+          - name: tip_amount
+          - name: tolls_amount
+          - name: ehail_fee
+          - name: improvement_surcharge
+          - name: total_amount
+          - name: payment_type
+          - name: trip_type
+          - name: congestion_surcharge
+          - name: filename
+
+      - name: yellow_tripdata
+        columns:
+          - name: vendorid
+          - name: tpep_pickup_datetime
+          - name: tpep_dropoff_datetime
+          - name: passenger_count
+          - name: trip_distance
+          - name: ratecodeid
+          - name: store_and_fwd_flag
+          - name: pulocationid
+          - name: dolocationid
+          - name: payment_type
+          - name: fare_amount
+          - name: extra
+          - name: mta_tax
+          - name: tip_amount
+          - name: tolls_amount
+          - name: improvement_surcharge
+          - name: total_amount
+          - name: congestion_surcharge
+          - name: airport_fee
+          - name: filename
