@@ -7,8 +7,8 @@ with source as (
 renamed as (
     SELECT
         --Normalize case and define column formats
-        UPPER(station) AS station,
-        UPPER(name) AS name,
+        station,
+        name,
         date::date AS date,
         awnd::double AS awnd,
         prcp::double AS prcp,
@@ -21,4 +21,13 @@ renamed as (
     FROM source
 )
 
-SELECT * FROM renamed
+SELECT
+    date,
+    awnd,
+    prcp,
+    snow,
+    snwd,
+    tmax,
+    tmin,
+    filename
+FROM renamed
