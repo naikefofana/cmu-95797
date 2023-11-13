@@ -5,7 +5,7 @@ with source as (
 
 renamed as (
     SELECT
-        TRIM(UPPER(dispatching_base_num)) AS dispatching_base_num, --Normalize cas and delete space
+        TRIM(UPPER(dispatching_base_num)) AS dispatching_base_num, --Normalize cas and delete space to use as foreign key
         pickup_datetime::date AS pickup_datetime, --put date as same format as base in order to use as foreign key
         dropOff_datetime,
         PUlocationID,

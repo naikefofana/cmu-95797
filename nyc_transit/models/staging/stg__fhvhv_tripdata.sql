@@ -6,8 +6,8 @@ with source as (
 renamed as (
     SELECT
         hvfhs_license_num,
-        TRIM(UPPER(dispatching_base_num)) AS dispatching_base_num, --Normalize case
-        TRIM(UPPER(originating_base_num)) AS originating_base_num, --Normalize case
+        TRIM(UPPER(dispatching_base_num)) AS dispatching_base_num, --Normalize case to use as foreign key
+        TRIM(UPPER(originating_base_num)) AS originating_base_num, --Normalize case to use as foreign key
         request_datetime,
         on_scene_datetime,
         pickup_datetime::date AS pickup_datetime, --put date as same format as base in order to use as foreign key
