@@ -34,4 +34,4 @@ renamed as (
     FROM source
 )
 
-SELECT * FROM renamed
+SELECT * FROM renamed WHERE access_a_ride_flag != NULL
