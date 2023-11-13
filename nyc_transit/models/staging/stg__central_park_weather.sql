@@ -6,7 +6,7 @@ with source as (
 
 renamed as (
     SELECT
-        --Normalize case and define column formats
+        Define column formats
         station,
         name,
         date::date AS date,
@@ -20,7 +20,7 @@ renamed as (
 
     FROM source
 )
-
+--Drop unnecessary rows 
 SELECT
     date,
     awnd,

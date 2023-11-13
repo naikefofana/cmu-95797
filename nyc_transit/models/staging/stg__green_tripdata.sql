@@ -5,11 +5,10 @@ with source as (
 
 renamed as (
     SELECT
-        --Switch Yes/No column to boolean and change format
         VendorID,
-        lpep_pickup_datetime,
+        lpep_pickup_datetime::date AS lpep_pickup_datetime, --put date as same format as base in order to use as foreign key
         lpep_dropoff_datetime,
-        {{flag_to_bool("store_and_fwd_flag")}} as store_and_fwd_flag,
+        {{flag_to_bool("store_and_fwd_flag")}} as store_and_fwd_flag, --Turn into boolean
         RatecodeID,
         PULocationID,
         DOLocationID,

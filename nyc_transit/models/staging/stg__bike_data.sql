@@ -39,7 +39,7 @@ renamed as (
 )
 
 SELECT 
-    COALESCE(starttime, started_at)::timestamp AS started_at_ts,
+    COALESCE(starttime, started_at)::date AS started_at_ts, --put date as same format as base in order to use as foreign key
 	COALESCE(stoptime, ended_at)::timestamp AS ended_at_ts,
 	COALESCE(tripduration::int,datediff('second', started_at_ts, ended_at_ts)) tripduration,
 	COALESCE("start station id", start_station_id) AS start_station_id,  
