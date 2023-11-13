@@ -1,21 +1,21 @@
 models:
   - name: stg__fhv_bases
-    description: ""
+    description: "Cleaned up fhv base"
     columns:
       - name: base_number
-        description: ""
+        description: "The TLC license number of the dispatching base"
 
       - name: base_name
-        description: ""
+        description: "The official name of the base entity"
 
       - name: dba
-        description: ""
+        description: "The “doing business as” name of the base"
 
       - name: dba_category
-        description: ""
+        description: "The category of the “doing business as” name of the base"
 
       - name: filename
-        description: ""
+        description: "Path of source file"
 
   - name: stg__bike_data
     description: ""
