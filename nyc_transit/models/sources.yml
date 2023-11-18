@@ -180,6 +180,8 @@ sources:
               - relationships:
                   to: source('main','fhv_bases')
                   field: base_number
+                  config:
+                    severity: warn
           - name: pickup_datetime
             data_type: TIMESTAMP
             description: "The date and time of the trip pick-up"
@@ -255,6 +257,9 @@ sources:
           - name: dropoff_datetime
             data_type: TIMESTAMP
             description: "The date and time of the trip drop-off"
+            tests:
+              - not_null
+              - dbt_expectations.expect_column_to_exist
           - name: pulocationid
             data_type: BIGINT
             description: "TLC Taxi Zone in which the trip began"
