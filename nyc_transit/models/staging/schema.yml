@@ -239,7 +239,6 @@ models:
               column_type: bool
           - not_null
           - dbt_expectations.expect_column_to_exist
-          - dbt_expectations.expect_column_to_exist
 
       - name: wav_match_flag
         description: ""
