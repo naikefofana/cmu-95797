@@ -5,4 +5,4 @@ SELECT
     datediff('second', started_at_ts, ended_at_ts) as duration_sec,
     start_station_id,
     end_station_id
-FROM {{ ref('stg__bike_data')}}
+FROM {{ ref('nyc_transit','stg__bike_data')}}

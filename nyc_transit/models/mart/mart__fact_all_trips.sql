@@ -6,7 +6,7 @@ WITH trips_renamed AS
         started_at_ts,
         ended_at_ts
     FROM {{ ref('stg__bike_data') }}
-
+    
     UNION ALL
     
     SELECT -- Column headers
@@ -14,7 +14,7 @@ WITH trips_renamed AS
         pickup_datetime AS started_at_ts,
         dropoff_datetime AS ended_at_ts
     FROM {{ ref('stg__fhv_tripdata') }}
-
+    
     UNION ALL
 
     SELECT 
@@ -22,7 +22,7 @@ WITH trips_renamed AS
         pickup_datetime AS started_at_ts,
         dropoff_datetime AS ended_at_ts
     FROM {{ ref('stg__fhvhv_tripdata') }}
-
+    
     UNION ALL
 
     SELECT 
@@ -30,7 +30,7 @@ WITH trips_renamed AS
         lpep_pickup_datetime AS started_at_ts,
         lpep_dropoff_datetime AS ended_at_ts,
     FROM {{ ref('stg__green_tripdata') }}
-
+    
     UNION ALL
 
     SELECT 
@@ -38,7 +38,7 @@ WITH trips_renamed AS
         tpep_pickup_datetime AS started_at_ts,
         tpep_dropoff_datetime AS ended_at_ts,
     FROM {{ ref('stg__yellow_tripdata') }}
-
+    
 )
 
 SELECT
